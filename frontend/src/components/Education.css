@@ -1,0 +1,230 @@
+
+/* Education Section Styles */
+.education-section {
+  padding: 6rem 0;
+  background:  var(--color-background); 
+}
+
+.education-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.education-item {
+  position: relative;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+
+.education-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.marker-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,  var(--color-secondary), var(--color-primary));
+}
+
+.marker-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--color-secondary);
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.education-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all var(--animation-normal) var(--animation-ease-in-out);
+  margin-left: 0rem;
+}
+
+.education-card:hover {
+  transform: translateX(8px);
+  border-color: var(--color-secondary);
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.15);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.institution {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.education-gpa {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  background: var(--color-surface-highlight);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.degree {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.period {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.education-description {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.certifications {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.certifications-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 2rem;
+}
+
+.certification-item {
+  background: var(--color-surface-highlight);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  transition: all var(--animation-normal) var(--animation-ease-in-out);
+}
+
+.certification-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-secondary);
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
+}
+
+.certification-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.certification-content {
+  flex: 1;
+}
+
+.certification-name {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.certification-issuer {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.certification-period {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 4rem 0;
+  }
+
+  .education-timeline {
+    padding-left: 2rem;
+  }
+
+  .education-item::before {
+    left: -2.8rem;
+  }
+
+  .education-marker {
+    left: -1rem;
+  }
+
+  .education-card {
+    padding: 1.5rem;
+    margin-left: 0.75rem;
+  }
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .education-gpa {
+    width: 100%;
+    text-align: center;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
