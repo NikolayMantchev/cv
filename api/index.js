@@ -113,9 +113,9 @@ app.get('/api/cv', async (req, res) => {
       cv = new CVModel({
         content: {
           personal: {
-            name: "Alex Chen",
-            title: "Full Stack Developer & AI Architect",
-            email: "alex.chen@example.com"
+            name: "Nikolay Mantchev",
+            title: "JavaScript Developer ",
+            email: "nik.mantchev@gmail.com"
           },
           about: {
             headline: "Building Intelligent Digital Experiences",
