@@ -195,7 +195,7 @@ export const CV_DATA = {
   // Social Links
   socialLinks: [
     { platform: "email", label: "Email", url: "mailto:nik.mantchev@gmail.com", icon: "✉️" },
-    { platform: "github", label: "GitHub", url: "https://github.com/alexchen", icon: "💻" },
+    { platform: "github", label: "GitHub", url: "https://github.com/NikolayMantchev", icon: "💻" },
     { platform: "linkedin", label: "LinkedIn", url: "https://www.linkedin.com/in/nikolay-mantchev/", icon: "💼" },
     { platform: "website", label: "Website", url: "", icon: "🌐" }
   ],
