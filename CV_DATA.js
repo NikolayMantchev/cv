@@ -1,4 +1,4 @@
-// Multi-Agent CV Data - Store all CV information here
+// Store all CV information here
 
 export const CV_DATA = {
   // Personal Information
@@ -57,9 +57,8 @@ export const CV_DATA = {
   skills: {
     frontend: [
       { name: "React", level: 95, icon: "⚛️" },
-      { name: "TypeScript", level: 90, icon: "📘" },
-      { name: "Tailwind CSS", level: 80, icon: "🎨" },
-      { name: "Angular", level: 65, icon: "📦" },
+      { name: "TypeScript", level: 80, icon: "📘" },
+      { name: "Angular", level: 70, icon: "📦" },
       { name: "Next.js", level: 90, icon: "🚀" }
     ],
     backend: [
