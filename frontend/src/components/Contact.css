@@ -8,6 +8,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  justify-content: flex-start;
 }
 
 .contact-section::before {
@@ -28,7 +29,7 @@
 }
 
 .contact-container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
