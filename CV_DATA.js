@@ -5,7 +5,7 @@ export const CV_DATA = {
   personal: {
     name: "Nikolay Mantchev",
     title: "Full Stack JavaScript Web Developer",
-    email: "nikolay.mantchev@gmail.com",
+    email: "nik.mantchev@gmail.com",
     phone: "+49 15770619973",
     location: "Frankfurt, Germany",
     website: "",

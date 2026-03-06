@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CV_DATA from '../../../CV_DATA';
+import './Navigation.css';
 
 const Navigation = ({ onNavigate }) => {
   const [activeSection, setActiveSection] = useState('home');
@@ -11,7 +12,7 @@ const Navigation = ({ onNavigate }) => {
 
       // Detect active section
       const sections = document.querySelectorAll('section');
-      const navHeight = 80;
+      const navHeight = 180;
 
       sections.forEach(section => {
         const sectionTop = section.offsetTop - navHeight / 2;
@@ -43,16 +44,9 @@ const Navigation = ({ onNavigate }) => {
       aria-label="Main navigation"
     >
       <div className="nav-container">
-        <button
-          className="nav-logo"
-          onClick={() => scrollToSection('home')}
-          aria-label="Back to top"
-        >
-          <span>{CV_DATA.personal.name.split(' ')[0]}</span>
-          
-        </button>
+       
 
-        <ul className="nav-links">
+        <ul className="nav-links" role="menubar" aria-orientation="horizontal">
           {CV_DATA.navItems.map(item => (
             <li key={item.id}>
               <button

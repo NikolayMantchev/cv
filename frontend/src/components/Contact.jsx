@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import CV_DATA from '../../../CV_DATA';
-import '../styles/global.css'
+import './Contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -45,7 +45,7 @@ const Contact = () => {
     }
   }
 
-  const { contact, socialLinks } = CV_DATA
+  const { contact, socialLinks, personal } = CV_DATA
 
   if (submitted) {
     return (
@@ -87,7 +87,7 @@ const Contact = () => {
               <div className="contact-icon">📍</div>
               <div className="contact-text">
                 <h3>Location</h3>
-                <p>{contact.location}</p>
+                <p>{personal.location}</p>
               </div>
             </div>
 
