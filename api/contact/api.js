@@ -59,7 +59,7 @@ const ContactModel = mongoose.model('Contact', contactSchema)
 app.post('/api/contact', async (req, res) => {
   try {
     const { name, email, subject, message } = req.body
-
+console.log('Received contact form submission:', { name, email, subject, message })
     // Validation
     if (!name || !email || !subject || !message) {
       return res.status(400).json({

@@ -1,11 +1,11 @@
 // API Server - Node.js with Express and MongoDB
 // Deployed as Vercel Serverless Function
 
-const express = require('express');
-const cors = require('cors');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
 
+import express from 'express'
+import cors from 'cors'
+import mongoose from 'mongoose'
+import dotenv from 'dotenv'
 dotenv.config();
 
 const app = express();
@@ -189,7 +189,7 @@ app.post('/api/contact', async (req, res) => {
 });
 
 // GET - Get contact form submissions (for admin purposes)
-app.get('/api/contacts', async (req, res) => {
+app.get('/api/contact', async (req, res) => {
   try {
     // In production, you should add authentication here
     const contacts = await ContactModel.find()
