@@ -19,7 +19,7 @@ const Hero = ({ onNavigate }) => {
     <section id="home" className="hero-section">
       <div className="hero-container">
         <div className="hero-content">
-          <h2 className="hero-greeting">Hello, I'm Nikolay</h2>
+         
           <h1 className="hero-name">{CV_DATA.personal.name}</h1>
           <h2 className="hero-title">{CV_DATA.personal.title}</h2>
           <p className="hero-description">

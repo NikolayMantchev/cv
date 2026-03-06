@@ -9,7 +9,7 @@ export const CV_DATA = {
     phone: "+49 15770619973",
     location: "Frankfurt, Germany",
     website: "",
-    github: "NikolayMantchev",
+    github: "https://github.com/NikolayMantchev",
     linkedin: "linkedin.com/in/nikolaymantchev",
     avatar: "https://media.licdn.com/dms/image/v2/D4E35AQFsmqa7Jnc0Uw/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1677234354312?e=1773046800&v=beta&t=Qs3AZukClZ0mD7G20PEXT4y2MIOoldcshgrT6WdkAL8"
   },
@@ -86,16 +86,26 @@ export const CV_DATA = {
       name: "Favorites",
       description: "Favorites is aplikation for bookmarking links. With features like Register, login, Favorites makes it easy to access and share important links whenever needed. It inkludes all crud operations, user authentication, and a user-friendly interface for managing your bookmarks.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
-      link: "https://github.com/NikolayMantchev/React-App---Favorites",
+      link: "https://favorites-client.vercel.app/",
       github: true,
       featured: true
     },
     {
       id: 2,
-      name: "TaskFlow Pro",
-      description: "Collaborative project management tool with real-time updates, drag-and-drop interfaces, and team analytics dashboard.",
-      technologies: ["Next.js", "Prisma", "PostgreSQL", "Docker", "Redis"],
-      link: "https://taskflow.pro",
+      name: "My-Shared-Blog",
+      description: "Created with learning purpose. It includes all CRUD operations, Authentication, Autorization, // TO DO.. (Validation and Error handling not impemented yet!)",
+      technologies: ["Angular", "TypeScript", "Firebase"],
+      link: "https://simple-blog-beta-two.vercel.app/home",
+      github: true,
+      featured: true
+    },
+    {
+      id: 3,
+      name: "Helium Stats",
+      description: "This App show statisticks for Hotspots on Helium Wallet Address. The pages/api directory is mapped to /api/*. Files in this directory are treated as API routes instead of React pages. They will be server-side only bundles and won't increase your client-side bundle size. API routes provide a solution to build your API with Next.js. You can write server-side code directly in these API routes, and it will be executed when the route is called.",
+      technologies: ["Next.js"],
+      link: "https://helium-stats.vercel.app/",
+      github: true,
       featured: true
     }
   ],

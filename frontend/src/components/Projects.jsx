@@ -47,7 +47,7 @@ const Projects = () => {
                   )}
                   {project.github && (
                     <a
-                      href={project.github ? `${CV_DATA.personal.github}` : project.link}
+                      href={project.github ? `${CV_DATA.personal.github}` : project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="project-link secondary"
