@@ -48,7 +48,7 @@ const Navigation = ({ onNavigate }) => {
 
         <ul className="nav-links" role="menubar" aria-orientation="horizontal">
           {CV_DATA.navItems.map(item => (
-            <li key={item.id}>
+            <p key={item.id}>
               <button
                 className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
                 onClick={() => scrollToSection(item.id)}
@@ -57,7 +57,7 @@ const Navigation = ({ onNavigate }) => {
                 <span className="nav-icon">{item.icon}</span>
                 <span className="nav-label">{item.label}</span>
               </button>
-            </li>
+            </p>
           ))}
         </ul>
       </div>
