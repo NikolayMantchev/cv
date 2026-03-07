@@ -117,7 +117,7 @@ export const CV_DATA = {
       title: "Photography",
       description: "I have a passion for capturing moments and telling stories through my lens. I specialize in nature photography and have a growing portfolio of work that can be viewed online.",
       link: "https://500px.com/p/manataphotography?view=photos",
-      image: "https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/photography.png?raw=true",
+      image: "https://raw.githubusercontent.com/NikolayMantchev/cv/refs/heads/main/frontend/src/assets/photography.png",
       category: "Photography"
     },
     {
@@ -125,7 +125,7 @@ export const CV_DATA = {
       title: "Graphic Design",
       description: "",
       link: "https://www.behance.net/StudioManata",
-      image: "/src/assets/design.png",
+      image: "https://raw.githubusercontent.com/NikolayMantchev/cv/refs/heads/main/frontend/src/assets/design.png",
       category: "Graphic Design"
     }
   ],
