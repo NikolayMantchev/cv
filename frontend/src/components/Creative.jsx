@@ -1,7 +1,6 @@
 import React from 'react';
 import CV_DATA from '../../../CV_DATA';
 import './Creative.css';
-
 const Creative = () => {
   return (
     <section id="creative" className="creative-section">
@@ -24,7 +23,7 @@ const Creative = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="creative-image">
-                <span className="creative-emoji">{item.image}</span>
+                  <img src={item.image} alt={item.title} />
               </div>
               <div className="creative-content">
                 <span className="creative-category">{item.category}</span>

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "API server for CV website with MongoDB",
   "main": "index.js",
+  "type": "module" ,
   "scripts": {
     "start": "node index.js",
     "dev": "node index.js"

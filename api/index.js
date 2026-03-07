@@ -243,9 +243,10 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
-module.exports = app;
 
 // Export for Vercel Serverless
-module.exports.handler = (req, res) => {
+export const handler = (req, res) => {
   return app(req, res);
 };
+
+export default app;

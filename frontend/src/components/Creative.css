@@ -46,13 +46,14 @@
 }
 
 .creative-image {
-  height: 150px;
+  height: 230px;
   background: linear-gradient(135deg, var(--color-surface), var(--color-surface-highlight));
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  display: flex;
 }
 
 .creative-emoji {

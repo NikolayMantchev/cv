@@ -1,5 +1,5 @@
 // Store all CV information here
-
+//import photography from "frontend/src/assets/photography.png";
 export const CV_DATA = {
   // Personal Information
   personal: {
@@ -117,7 +117,7 @@ export const CV_DATA = {
       title: "Photography",
       description: "I have a passion for capturing moments and telling stories through my lens. I specialize in nature photography and have a growing portfolio of work that can be viewed online.",
       link: "https://500px.com/p/manataphotography?view=photos",
-      image: "📸",
+      image: "/src/assets/photography.png",
       category: "Photography"
     },
     {
@@ -125,7 +125,7 @@ export const CV_DATA = {
       title: "Graphic Design",
       description: "",
       link: "https://www.behance.net/StudioManata",
-      image: "🎨",
+      image: "/src/assets/design.png",
       category: "Graphic Design"
     }
   ],
