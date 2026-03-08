@@ -116,7 +116,7 @@ export const CV_DATA = {
       id: 1,
       title: "Photography",
       description: "I have a passion for capturing moments and telling stories through my lens. I specialize in nature photography and have a growing portfolio of work that can be viewed online.",
-      link: "https://500px.com/p/manataphotography?view=photos",
+      link: "https://www.flickr.com/photos/64448797@N07/",
       image: "https://raw.githubusercontent.com/NikolayMantchev/cv/refs/heads/main/frontend/src/assets/photography.png",
       category: "Photography"
     },
