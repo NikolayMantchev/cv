@@ -16,14 +16,14 @@ export const CV_DATA = {
 
   // Navigation
   navItems: [
-    { id: 'home', label: 'Home', icon: '🏠' },
-    { id: 'about', label: 'About', icon: '👤' },
-    { id: 'experience', label: 'Experience', icon: '💼' },
-    { id: 'skills', label: 'Skills', icon: '⚡' },
-    { id: 'projects', label: 'Projects', icon: '🚀' },
-    { id: 'creative', label: 'Creative', icon: '🎨' },
-    { id: 'education', label: 'Education', icon: '🎓' },
-    { id: 'contact', label: 'Contact', icon: '✉️' }
+    { id: 'home', label: 'Home', logo: "https://www.dropbox.com/scl/fi/i6eyv09hpbs7n0m4pomz6/LOGO-Manata.png?rlkey=uxw30to5e91eayzl7q46dcqgk&st=bjavoul4&dl=0" },
+    { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'skills', label: 'Skills'},
+    { id: 'projects', label: 'Projects'},
+    { id: 'creative', label: 'Creative' },
+    { id: 'education', label: 'Education' },
+    { id: 'contact', label: 'Contact' }
   ],
 
   // About Section
