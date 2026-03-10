@@ -43,33 +43,18 @@ const Navigation = ({ onNavigate }) => {
       role="navigation"
       aria-label="Main navigation"
     >
-  <div class="nav__container" >
+  <div className="nav__container" >
       
-      <button class="header__menu" onclick="toggleMenu()">
+      <button className="header__menu" onclick="toggleMenu()">
 
         
           <img src={CV_DATA.navItems.logo} alt={CV_DATA.navItems.label}/>
        
 
     
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-          <path fill="none" stroke-width="2px" stroke-linecap="round" d="M 4 12 l 16 0">
-            <animate id="to-close-opacity" attributeName="d" calcMode="spline" keySplines="0.42, 0, 0.58, 1"
-              values="M 4 12 l 16 0;M 12 12 l 0 0" begin="indefinite" dur="0.3s" fill="freeze" />
-            <animate id="to-open-opacity" attributeName="d" calcMode="spline" keySplines="0.42, 0, 0.58, 1"
-              values="M 12 12 l 0 0;M 4 12 l 16 0" begin="indefinite" dur="0.3s" fill="freeze" />
-          </path>
-          <path fill="none" stroke-width="2px" stroke-linecap="round" d="M 4 6 l 16 0 M 4 18 l 16 0">
-            <animate id="to-close-d" attributeName="d" calcMode="spline" keySplines="0.42, 0, 0.58, 1"
-              values="M 4 6 l 16 0 M 4 18 l 16 0;M 6.35 6.35 l 11.3 11.3 M 6.35 17.45 l 11.3 -11.3" begin="indefinite"
-              dur="0.3s" fill="freeze" />
-            <animate id="to-open-d" attributeName="d" calcMode="spline" keySplines="0.42, 0, 0.58, 1"
-              values="M 6.35 6.35 l 11.3 11.3 M 6.35 17.45 l 11.3 -11.3;M 4 6 l 16 0 M 4 18 l 16 0" begin="indefinite"
-              dur="0.3s" fill="freeze" />
-          </path>
-        </svg>
+        
       </button>
-         <nav class="nav bracket bracket--top header__nav header__main">
+         <nav className="nav bracket bracket--top header__nav header__main">
            <ul className="nav-links" role="menubar" aria-orientation="horizontal">
              <div class="nav__item" role="none">
               {CV_DATA.navItems.map(item => (
