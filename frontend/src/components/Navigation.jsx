@@ -43,15 +43,15 @@ const Navigation = ({ onNavigate }) => {
       role="navigation"
       aria-label="Main navigation"
     >
-  <div class="nav__container">
+  <div class="nav__container" >
       
       <button class="header__menu" onclick="toggleMenu()">
-<a class="header__logo" href="/" title="manata home">
+
         
-          <img src="/assets/logo-manata.png" alt="manata logo"/>
+          <img src={CV_DATA.navItems.logo} alt={CV_DATA.navItems.label}/>
        
 
-      </a>
+    
         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
           <path fill="none" stroke-width="2px" stroke-linecap="round" d="M 4 12 l 16 0">
             <animate id="to-close-opacity" attributeName="d" calcMode="spline" keySplines="0.42, 0, 0.58, 1"
@@ -69,20 +69,23 @@ const Navigation = ({ onNavigate }) => {
           </path>
         </svg>
       </button>
-      <nav class="nav bracket bracket--top header__nav header__main">
-        <ul class="hoverable__reset">
-          <li class="hoverable hoverable--active">
-            <a href="/"><span class="hoverable__line">Home</span></a>
-          </li>
-          <li class="hoverable">
-            <a href="/tools/"><span class="hoverable__line">Tools</span></a>
-          </li>
-          <li class="hoverable">
-            <a href="/math/"><span class="hoverable__line">Math</span></a>
-          </li>
-          <li class="hoverable">
-            <a href="/things/"><span class="hoverable__line">Things</span></a>
-          </li>
+         <nav class="nav bracket bracket--top header__nav header__main">
+           <ul className="nav-links" role="menubar" aria-orientation="horizontal">
+             <div class="nav__item" role="none">
+              {CV_DATA.navItems.map(item => (
+
+               <p key={item.id}>
+                <button
+                   className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
+                   onClick={() => scrollToSection(item.id)}
+                   aria-current={activeSection === item.id ? 'page' : undefined}
+                   >
+                
+                <span className="nav-label">{item.label}</span>
+              </button>
+            </p>
+          ))}
+          </div>
         </ul>
       </nav>
       
