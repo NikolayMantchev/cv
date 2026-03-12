@@ -1,5 +1,6 @@
 import React from 'react';
 import CV_DATA from '../../../CV_DATA';
+import { Icon } from '../utils/icons';
 import './Projects.css';
 
 const Projects = () => {
@@ -21,7 +22,7 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="project-image">
-                <span className="project-emoji">{project.id % 3 === 1 ? '🚀' : project.id % 3 === 2 ? '⚙️' : '🎨'}</span>
+                <Icon name={project.icon} className="project-icon" />
               </div>
               <div className="project-content">
                 <div className="project-header">

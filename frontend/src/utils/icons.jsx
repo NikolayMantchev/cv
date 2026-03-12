@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaGlobe, FaDocker, FaGitAlt } from 'react-icons/fa';
-import { MdEmail, MdLocationOn, MdApi, MdBrush, MdCheck } from 'react-icons/md';
+import { MdEmail, MdLocationOn, MdApi, MdBrush, MdCheck, MdBookmark, MdArticle, MdShowChart } from 'react-icons/md';
 import {
   SiReact, SiTypescript, SiAngular, SiNextdotjs,
   SiNodedotjs, SiExpress, SiMongodb,
@@ -53,6 +53,11 @@ export const ICON_MAP = {
   focus:      <BiTargetLock />,
   philosophy: <HiOutlineLightBulb />,
   mission:    <RiRocketLine />,
+
+  // Projects
+  bookmark: <MdBookmark />,
+  article:  <MdArticle />,
+  chart:    <MdShowChart />,
 
   // Misc
   check: <MdCheck />,

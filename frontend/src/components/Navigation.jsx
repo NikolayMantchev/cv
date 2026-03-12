@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import CV_DATA from '../../../CV_DATA';
+import logoManata from '../assets/logo-manata.png';
 import './Navigation.css';
 
-const Navigation = ({ onNavigate }) => {
+const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
@@ -10,7 +11,6 @@ const Navigation = ({ onNavigate }) => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      // Detect active section
       const sections = document.querySelectorAll('section');
       const navHeight = 180;
 
@@ -38,71 +38,36 @@ const Navigation = ({ onNavigate }) => {
   };
 
   return (
-    <nav
-      className={`navigation ${scrolled ? 'scrolled' : ''}`}
-      role="navigation"
-      aria-label="Main navigation"
-    >
-  <div className="nav__container" >
-      
-      <button className="header__menu" onclick="toggleMenu()">
-
-        
-          <img src={CV_DATA.navItems.logo} alt={CV_DATA.navItems.label}/>
-       
-
-    
-        
+    <>
+      <button
+        className="header__menu"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label="Scroll to top"
+      >
+        <img src={logoManata} alt="Logo" />
       </button>
-         <nav className="nav bracket bracket--top header__nav header__main">
-           <ul className="nav-links" role="menubar" aria-orientation="horizontal">
-             <div class="nav__item" role="none">
-              {CV_DATA.navItems.map(item => (
 
-               <p key={item.id}>
-                <button
-                   className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
-                   onClick={() => scrollToSection(item.id)}
-                   aria-current={activeSection === item.id ? 'page' : undefined}
-                   >
-                
+      <nav
+        className={`navigation ${scrolled ? 'scrolled' : ''}`}
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <ul className="nav-links" role="menubar" aria-orientation="horizontal">
+          {CV_DATA.navItems.map(item => (
+            <li key={item.id} role="none">
+              <button
+                className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
+                onClick={() => scrollToSection(item.id)}
+                aria-current={activeSection === item.id ? 'page' : undefined}
+              >
                 <span className="nav-label">{item.label}</span>
               </button>
-            </p>
+            </li>
           ))}
-          </div>
         </ul>
       </nav>
-      
-      
-    </div>
-    </nav>
+    </>
   );
 };
 
 export default Navigation;
-
-//<nav
-//      className={`navigation ${scrolled ? 'scrolled' : ''}`}
-//      role="navigation"
-//      aria-label="Main navigation"
-//    >
-//      <div className="nav-container">
-//       
-//
-//        <ul className="nav-links" role="menubar" aria-orientation="horizontal">
-//          {CV_DATA.navItems.map(item => (
-//            <p key={item.id}>
-//              <button
-//                className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
-//                onClick={() => scrollToSection(item.id)}
-//                aria-current={activeSection === item.id ? 'page' : undefined}
-//              >
-//                <span className="nav-icon">{item.icon}</span>
-//                <span className="nav-label">{item.label}</span>
-//              </button>
-//            </p>
-//          ))}
-//        </ul>
-//      </div>
-//    </nav> 

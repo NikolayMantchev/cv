@@ -1,6 +1,6 @@
 /* Navigation — Editorial Dark */
 
-.nav-container {
+.navigation {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
 }
 
 /* Frosted bar when scrolled */
-.nav-container.scrolled {
+.navigation.scrolled {
   background: rgba(11, 11, 11, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -97,6 +97,37 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
+}
+
+.nav__container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__menu {
+  position: fixed;
+  top: 0.75rem;
+  left: 1.5rem;
+  z-index: 1001;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.35rem 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu img {
+  height: 28px;
+  width: auto;
+  display: block;
+  opacity: 0.85;
+  transition: opacity var(--animation-fast) var(--animation-ease-in-out);
+}
+
+.header__menu:hover img {
+  opacity: 1;
 }
 
 /* ─── Mobile ────────────────────────────────────────────── */

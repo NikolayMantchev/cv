@@ -88,7 +88,8 @@ export const CV_DATA = {
       technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
       link: "https://favorites-client.vercel.app/",
       github: true,
-      featured: true
+      featured: true,
+      icon: "bookmark"
     },
     {
       id: 2,
@@ -97,7 +98,8 @@ export const CV_DATA = {
       technologies: ["Angular", "TypeScript", "Firebase"],
       link: "https://simple-blog-beta-two.vercel.app/home",
       github: true,
-      featured: true
+      featured: true,
+      icon: "article"
     },
     {
       id: 3,
@@ -106,7 +108,8 @@ export const CV_DATA = {
       technologies: ["Next.js"],
       link: "https://helium-stats.vercel.app/",
       github: true,
-      featured: true
+      featured: true,
+      icon: "chart"
     }
   ],
 
