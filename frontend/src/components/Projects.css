@@ -15,21 +15,20 @@
 .project-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 16px;
+  border-radius: 2px;
   overflow: hidden;
-  transition: all var(--animation-normal) var(--animation-ease-in-out);
+  transition: border-color var(--animation-fast) var(--animation-ease-in-out);
   position: relative;
 }
 
 .project-card.featured {
-  border-color: var(--color-primary);
-  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.15);
+  border-color: var(--color-border);
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: none;
   border-color: var(--color-primary);
-  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+  box-shadow: none;
 }
 
 .project-image {
@@ -49,7 +48,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 40%, rgba(99, 102, 241, 0.1) 100%);
+  background: linear-gradient(45deg, transparent 40%, rgba(200, 255, 0, 0.06) 100%);
   transform: translateX(-100%);
   transition: transform var(--animation-normal) var(--animation-ease-in-out);
 }
@@ -86,24 +85,25 @@
 }
 
 .project-name {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-text);
 }
 
 .project-tag {
   font-family: var(--font-body);
-  font-size: 0.75rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-weight: 600;
+  font-size: 0.65rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .project-tag.featured {
-  background: var(--color-gradient);
-  color: white;
+  background: var(--color-primary);
+  color: #000;
 }
 
 .project-description {
@@ -144,25 +144,27 @@
 
 .project-link {
   flex: 1;
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 1rem;
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  border-radius: 8px;
-  transition: all var(--animation-normal) var(--animation-ease-in-out);
+  border-radius: 2px;
+  transition: all var(--animation-fast) var(--animation-ease-in-out);
 }
 
 .project-link.primary {
-  background: var(--color-gradient);
-  color: white;
+  background: var(--color-primary);
+  color: #000;
 }
 
 .project-link.secondary {
-  background: var(--color-surface-highlight);
+  background: transparent;
   border: 1px solid var(--color-border);
-  color: var(--color-text);
+  color: var(--color-text-secondary);
 }
 
 .project-link:hover {
@@ -170,7 +172,12 @@
 }
 
 .project-link.primary:hover {
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  background: #fff;
+}
+
+.project-link.secondary:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 /* Responsive Design */

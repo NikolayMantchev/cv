@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import CV_DATA from '../../../CV_DATA';
+import { Icon } from '../utils/icons';
 import './Contact.css';
 
 const Contact = () => {
@@ -76,7 +77,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="contact-info">
             <div className="contact-item">
-              <div className="contact-icon">✉️</div>
+              <div className="contact-icon"><Icon name="email" /></div>
               <div className="contact-text">
                 <h3>Email</h3>
                 <p>{contact.email}</p>
@@ -84,7 +85,7 @@ const Contact = () => {
             </div>
 
             <div className="contact-item">
-              <div className="contact-icon">📍</div>
+              <div className="contact-icon"><Icon name="location" /></div>
               <div className="contact-text">
                 <h3>Location</h3>
                 <p>{personal.location}</p>
@@ -102,7 +103,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span className="social-icon">{link.icon}</span>
+                    <span className="social-icon"><Icon name={link.icon} /></span>
                     <span className="social-label">{link.label}</span>
                   </a>
                 ))}

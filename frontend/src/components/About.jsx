@@ -1,5 +1,6 @@
 import React from 'react';
 import CV_DATA from '../../../CV_DATA';
+import { Icon } from '../utils/icons';
 import './About.css';
 
 const About = () => {
@@ -22,7 +23,7 @@ const About = () => {
             <ul className="about-bio">
               {CV_DATA.about.bio.map((item, index) => (
                 <li key={index}>
-                  <span className="bio-icon">✓</span>
+                  <span className="bio-icon"><Icon name="check" /></span>
                   {item}
                 </li>
               ))}
@@ -32,7 +33,7 @@ const About = () => {
           <div className="about-visual">
             <div className="skill-card">
               <div className="skill-card-header">
-                <span className="skill-card-icon">🎯</span>
+                <span className="skill-card-icon"><Icon name="focus" /></span>
                 <h4 className="skill-card-title">My Focus</h4>
               </div>
               <div className="skill-card-body">
@@ -45,7 +46,7 @@ const About = () => {
 
             <div className="skill-card">
               <div className="skill-card-header">
-                <span className="skill-card-icon">💡</span>
+                <span className="skill-card-icon"><Icon name="philosophy" /></span>
                 <h4 className="skill-card-title">Philosophy</h4>
               </div>
               <div className="skill-card-body">
@@ -58,7 +59,7 @@ const About = () => {
 
             <div className="skill-card">
               <div className="skill-card-header">
-                <span className="skill-card-icon">🚀</span>
+                <span className="skill-card-icon"><Icon name="mission" /></span>
                 <h4 className="skill-card-title">Mission</h4>
               </div>
               <div className="skill-card-body">

@@ -1,5 +1,6 @@
 import React from 'react';
 import CV_DATA from '../../../CV_DATA';
+import { Icon } from '../utils/icons';
 import './Hero.css';
 
 const Hero = ({ onNavigate }) => {
@@ -19,9 +20,9 @@ const Hero = ({ onNavigate }) => {
     <section id="home" className="hero-section">
       <div className="hero-container">
         <div className="hero-content">
-         
+          <span className="hero-eyebrow">Portfolio — Frankfurt, Germany</span>
           <h1 className="hero-name">{CV_DATA.personal.name}</h1>
-          <h2 className="hero-title">{CV_DATA.personal.title}</h2>
+          <p className="hero-title">{CV_DATA.personal.title}</p>
           <p className="hero-description">
             Full Stack JavaScript Web Developer passionate about building intelligent digital experiences. I specialize in creating innovative solutions that bridge the gap between technology and user needs. Let's explore how I can bring your ideas to life!
           </p>
@@ -39,7 +40,7 @@ const Hero = ({ onNavigate }) => {
           </div>
 
           <div className="hero-socials">
-            {CV_DATA.socialLinks.slice(0, 4).map((social, index) => (
+            {CV_DATA.socialLinks.slice(0, 3).map((social, index) => (
               <a
                 key={index}
                 href={social.url}
@@ -48,7 +49,7 @@ const Hero = ({ onNavigate }) => {
                 className="hero-social"
                 aria-label={social.label}
               >
-                <span>{social.icon}</span>
+                <Icon name={social.icon} />
               </a>
             ))}
           </div>

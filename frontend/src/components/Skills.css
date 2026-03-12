@@ -20,29 +20,30 @@
 .category-tab {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2rem;
-  background: var(--color-surface-highlight);
-  border: 2px solid var(--color-border);
-  border-radius: 12px;
+  gap: 0.6rem;
+  padding: 0.6rem 1.25rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
   color: var(--color-text-secondary);
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: all var(--animation-normal) var(--animation-ease-in-out);
+  transition: all var(--animation-fast) var(--animation-ease-in-out);
 }
 
 .category-tab:hover {
   border-color: var(--color-primary);
   color: var(--color-text);
-  transform: translateY(-2px);
 }
 
 .category-tab.active {
   background: var(--color-primary);
   border-color: var(--color-primary);
-  color: white;
+  color: #000;
 }
 
 .tab-icon {
@@ -62,9 +63,9 @@
 .skill-item {
   background: var(--color-surface-highlight);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 2rem;
-  transition: all var(--animation-normal) var(--animation-ease-in-out);
+  border-radius: 2px;
+  padding: 1.75rem;
+  transition: all var(--animation-fast) var(--animation-ease-in-out);
   position: relative;
   overflow: hidden;
 }
@@ -74,22 +75,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--color-gradient);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--animation-normal) var(--animation-ease-in-out);
+  width: 2px;
+  height: 0;
+  background: var(--color-primary);
+  transition: height var(--animation-normal) var(--animation-ease-in-out);
 }
 
 .skill-item:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-primary);
-  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+  border-color: var(--color-border);
+  box-shadow: none;
 }
 
 .skill-item:hover::before {
-  transform: scaleX(1);
+  height: 100%;
 }
 
 .skill-header {
@@ -104,32 +102,35 @@
 }
 
 .skill-name {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
   color: var(--color-text);
 }
 
 .skill-bar {
-  height: 8px;
-  background: var(--color-surface);
-  border-radius: 4px;
+  height: 2px;
+  background: var(--color-border);
+  border-radius: 0;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .skill-progress {
   height: 100%;
-  border-radius: 4px;
-  transition: width var(--animation-normal) var(--animation-ease-in-out);
+  border-radius: 0;
+  background: var(--color-primary);
+  transition: width var(--animation-slow) var(--animation-ease-out);
 }
 
 .skill-level {
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  color: var(--color-accent);
-  font-weight: 600;
+  font-size: 0.72rem;
+  color: var(--color-primary);
+  font-weight: 500;
   text-align: right;
+  letter-spacing: 0.05em;
 }
 
 /* Responsive Design */

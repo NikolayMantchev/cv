@@ -1,25 +1,23 @@
 import React, { useState } from 'react';
 import CV_DATA from '../../../CV_DATA';
+import { Icon } from '../utils/icons';
 import './Skills.css';
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('frontend');
 
   const skillCategories = [
-    { id: 'frontend', name: 'Frontend', icon: '💻' },
-    { id: 'backend', name: 'Backend', icon: '⚙️' },
-    { id: 'grafik_design', name: 'Grafik Design', icon: '🤖' },
-    { id: 'devops', name: 'DevOps', icon: '🔧' }
+    { id: 'frontend',      name: 'Frontend',       icon: 'tab_frontend' },
+    { id: 'backend',       name: 'Backend',        icon: 'tab_backend' },
+    { id: 'grafik_design', name: 'Graphic Design', icon: 'tab_design' },
+    { id: 'devops',        name: 'DevOps',         icon: 'tab_devops' }
   ];
 
   return (
     <section id="skills" className="skills-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">
-           
-            Skills
-          </h2>
+          <h2 className="section-title">Skills</h2>
           <div className="section-line"></div>
         </div>
 
@@ -31,7 +29,7 @@ const Skills = () => {
                 className={`category-tab ${activeCategory === category.id ? 'active' : ''}`}
                 onClick={() => setActiveCategory(category.id)}
               >
-                <span className="tab-icon">{category.icon}</span>
+                <span className="tab-icon"><Icon name={category.icon} /></span>
                 <span className="tab-name">{category.name}</span>
               </button>
             ))}
@@ -46,16 +44,13 @@ const Skills = () => {
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   <div className="skill-header">
-                    <span className="skill-icon">{skill.icon}</span>
+                    <span className="skill-icon"><Icon name={skill.icon} /></span>
                     <span className="skill-name">{skill.name}</span>
                   </div>
                   <div className="skill-bar">
                     <div
                       className="skill-progress"
-                      style={{
-                        width: `${skill.level}%`,
-                        background: CV_DATA.colors.gradient
-                      }}
+                      style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
                   <span className="skill-level">{skill.level}%</span>

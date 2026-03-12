@@ -15,12 +15,11 @@
 .creative-card {
   background: var(--color-surface-highlight);
   border: 1px solid var(--color-border);
-  border-radius: 16px;
+  border-radius: 2px;
   overflow: hidden;
-  transition: all var(--animation-normal) var(--animation-ease-in-out);
+  transition: border-color var(--animation-fast) var(--animation-ease-in-out);
   text-decoration: none;
   position: relative;
-  overflow: hidden;
 }
 
 .creative-card::before {
@@ -30,15 +29,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+  background: linear-gradient(135deg, rgba(200, 255, 0, 0.06), transparent);
   opacity: 0;
   transition: opacity var(--animation-normal) var(--animation-ease-in-out);
+  z-index: 1;
 }
 
 .creative-card:hover {
-  transform: translateY(-8px);
   border-color: var(--color-primary);
-  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
+  box-shadow: none;
 }
 
 .creative-card:hover::before {
@@ -78,18 +77,19 @@
 
 .creative-category {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--color-accent);
-  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--color-primary);
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .creative-title {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: 1.25rem;
-  font-weight: 700;
+  font-style: italic;
+  font-weight: 600;
   color: var(--color-text);
   margin-bottom: 0.75rem;
 }

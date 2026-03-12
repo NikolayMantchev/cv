@@ -56,26 +56,26 @@ export const CV_DATA = {
   // Skills Section
   skills: {
     frontend: [
-      { name: "React", level: 95, icon: "⚛️" },
-      { name: "TypeScript", level: 80, icon: "📘" },
-      { name: "Angular", level: 70, icon: "📦" },
-      { name: "Next.js", level: 90, icon: "🚀" }
+      { name: "React",      level: 95, icon: "react" },
+      { name: "TypeScript", level: 80, icon: "typescript" },
+      { name: "Angular",    level: 70, icon: "angular" },
+      { name: "Next.js",    level: 90, icon: "nextjs" }
     ],
     backend: [
-      { name: "Node.js", level: 90, icon: "🟢" },
-      { name: "Express", level: 90, icon: "⚡" },
-      { name: "MongoDB", level: 90, icon: "🍃" },
-      { name: "REST APIs", level: 95, icon: "📡" }
+      { name: "Node.js",   level: 90, icon: "nodejs" },
+      { name: "Express",   level: 90, icon: "express" },
+      { name: "MongoDB",   level: 90, icon: "mongodb" },
+      { name: "REST APIs", level: 95, icon: "restapi" }
     ],
     devops: [
-      { name: "Docker", level: 80, icon: "🐳" },
-      { name: "Vercel", level: 70, icon: "🌈" },
-      { name: "CI/CD", level: 85, icon: "🔄" },
-      { name: "Git", level: 85, icon: "📦" },
+      { name: "Docker", level: 80, icon: "docker" },
+      { name: "Vercel", level: 70, icon: "vercel" },
+      { name: "CI/CD",  level: 85, icon: "cicd" },
+      { name: "Git",    level: 85, icon: "git" }
     ],
-     grafik_design: [
-      { name: "Photoshop", level: 90, icon: "🖼️" },
-      { name: "Figma", level: 60, icon: "🎨" }
+    grafik_design: [
+      { name: "Photoshop", level: 90, icon: "photoshop" },
+      { name: "Figma",     level: 60, icon: "figma" }
     ]
   },
 
@@ -135,10 +135,20 @@ export const CV_DATA = {
     {
       id: 1,
       institution: "Software University, Bulgaria",
-      degree: "JavaScript Web Developer Diploma",
-      period: "2020 - 2023",
-      description: "Specialization in JavaScript and Web Technologies. Graduated with honors. Research focus on natural language processing.",
-      gpa: "5.3/6.0"
+      degree: "JS Web Developer Diploma",
+      period: "2020 - 2022",
+      issued: "15/09/2022",
+      description: "Professional qualification in JavaScript and Web Technologies. Completed 7 courses covering full-stack development with JavaScript, React, Angular, Node.js, and HTML & CSS.",
+      gpa: "5.3/6.0",
+      courses: [
+        { name: "Programming Fundamentals", hours: 54, grade: "6.00" },
+        { name: "JS Advanced",              hours: 27, grade: "4.02" },
+        { name: "JS Applications",          hours: 27, grade: "6.00" },
+        { name: "JS Back-End",              hours: 24, grade: "5.13" },
+        { name: "ReactJS",                  hours: 20, grade: "6.00" },
+        { name: "Angular",                  hours: 28, grade: "5.06" },
+        { name: "HTML & CSS",               hours: 21, grade: "4.76" }
+      ]
     }
   ],
 
@@ -146,40 +156,48 @@ export const CV_DATA = {
   certifications: [
     {
       id: 1,
-      name: "JS Fundamentals Certification",
+      name: "JS Fundamentals — May 2020",
       issuer: "Software University, Bulgaria",
+      issued: "18/08/2020",
       period: "2020",
-      gpa: "6.0/6.0"
+      gpa: "6.00/6.00",
+      topics: ["Basic Syntax, Conditional Statements and Loops", "Data Types and Variables", "Basic HTML", "Arrays", "Basic CSS", "Functions", "HTTP Basics", "Arrays Advanced", "Problem Solving", "Objects and Classes", "Bitwise Operations", "Associative Arrays", "Software Development Concepts", "Text Processing", "Database Basics", "Regular Expressions", "Git and GitHub", "QA Introduction"]
     },
     {
       id: 2,
-      name: "JS Applications Certification",
-      topics: ["Unit Testing and Modules", "Rest Services and AJAX", "Asynchronous Programming", "Remote Databases", "Templating", "Routing", "Workshop: Single Page Applications", "Design Patterns and Best Practices", "Project Architecture"],
+      name: "JS Applications — October 2020",
       issuer: "Software University, Bulgaria",
+      issued: "23/12/2020",
       period: "2020",
-      gpa: "6.0/6.0"
+      gpa: "6.00/6.00",
+      topics: ["Unit Testing and Modules", "REST Services and AJAX", "Asynchronous Programming", "Remote Databases", "Templating", "Routing", "Workshop: Single Page Application", "Design Patterns and Best Practices", "Project Architecture"]
     },
     {
       id: 3,
-      name: "React Developer Certification",
-      topics: ["Intro to React and JSX", "Components: Basic Idea", "Components: Deep Dive", "Routing", "Forms", "React Hooks", "Advanced TTechniques"],
+      name: "ReactJS — March 2021",
       issuer: "Software University, Bulgaria",
+      issued: "21/04/2021",
       period: "2021",
-      gpa: "6.0/6.0"
+      gpa: "6.00/6.00",
+      topics: ["Intro to React and JSX", "Components: Basic Idea", "Components: Deep Dive", "Routing", "Forms", "React Hooks", "Advanced Techniques"]
     },
     {
       id: 4,
-      name: "Angular Developer Certification",
+      name: "JS Back-End — January 2022",
       issuer: "Software University, Bulgaria",
-      period: "2021",
-      gpa: "5.06/6.0"
-    },
-     {
-      id: 5,
-      name: "JavaScript Backend Developer Certification",
-      issuer: "Software University, Bulgaria",
+      issued: "04/03/2022",
       period: "2022",
-      gpa: "5.13/6.0"
+      gpa: "5.13/6.00",
+      topics: ["Intro to Node.js", "Node.js Streams and Utilities", "ExpressJS and Templating", "NoSQL and MongoDB", "Session and Authentication", "Validation and Error Handling"]
+    },
+    {
+      id: 5,
+      name: "Angular — March 2022",
+      issuer: "Software University, Bulgaria",
+      issued: "18/04/2022",
+      period: "2022",
+      gpa: "5.06/6.00",
+      topics: ["Intro to Angular and TypeScript", "Components", "DI, Intro to RxJS, Services", "Modules and Routing", "Forms", "Pipes, Interceptors and Subjects", "State Management"]
     }
   ],
 
@@ -203,10 +221,10 @@ export const CV_DATA = {
 
   // Social Links
   socialLinks: [
-    { platform: "email", label: "Email", url: "mailto:nik.mantchev@gmail.com", icon: "✉️" },
-    { platform: "github", label: "GitHub", url: "https://github.com/NikolayMantchev", icon: "💻" },
-    { platform: "linkedin", label: "LinkedIn", url: "https://www.linkedin.com/in/nikolay-mantchev/", icon: "💼" },
-    { platform: "website", label: "Website", url: "", icon: "🌐" }
+    { platform: "email",    label: "Email",    url: "mailto:nik.mantchev@gmail.com",                 icon: "email" },
+    { platform: "github",   label: "GitHub",   url: "https://github.com/NikolayMantchev",            icon: "github" },
+    { platform: "linkedin", label: "LinkedIn", url: "https://www.linkedin.com/in/nikolay-mantchev/", icon: "linkedin" },
+    { platform: "website",  label: "Website",  url: "",                                              icon: "website" }
   ],
 
   // Color Palette - Dark Techy Aesthetic
