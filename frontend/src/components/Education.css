@@ -209,6 +209,123 @@
   }
 }
 
+/* Certification item as button */
+button.certification-item {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Modal */
+.cert-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.cert-modal {
+  background: var(--color-surface);
+  border: 1px solid var(--color-primary);
+  border-radius: 2px;
+  padding: 2.5rem;
+  max-width: 640px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: fadeInUp 0.2s ease-out;
+}
+
+.cert-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.15s;
+}
+
+.cert-modal-close:hover {
+  color: var(--color-primary);
+}
+
+.cert-modal-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cert-modal-issuer {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+}
+
+.cert-modal-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0.5rem 0 1rem;
+}
+
+.cert-modal-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cert-modal-gpa,
+.cert-modal-date {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  padding: 0.2rem 0.6rem;
+}
+
+.cert-modal-topics-title {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.cert-modal-topics-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cert-modal-topics-list li {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  padding: 0.4rem 0.75rem;
+  border-left: 2px solid var(--color-primary);
+  background: var(--color-surface-highlight);
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
