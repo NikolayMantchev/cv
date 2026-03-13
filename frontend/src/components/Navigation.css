@@ -25,6 +25,7 @@
   align-items: center;
   gap: 0.25rem;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .nav-links a {
@@ -119,7 +120,7 @@
 }
 
 .header__menu img {
-  height: 28px;
+  height: 32px;
   width: auto;
   display: block;
   opacity: 0.85;
