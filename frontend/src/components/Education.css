@@ -292,6 +292,7 @@ button.certification-item {
 }
 
 .cert-modal-gpa,
+.cert-modal-hours,
 .cert-modal-date {
   font-family: var(--font-body);
   font-size: 0.75rem;

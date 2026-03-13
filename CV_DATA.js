@@ -130,6 +130,14 @@ export const CV_DATA = {
       link: "https://www.behance.net/StudioManata",
       image: "https://raw.githubusercontent.com/NikolayMantchev/cv/refs/heads/main/frontend/src/assets/design.png",
       category: "Graphic Design"
+    },
+    {
+      id: 3,
+      title: "Store Owner",
+      description: "",
+      link: "",
+      image: "",
+      category: "Graphic Design"
     }
   ],
 
@@ -163,6 +171,7 @@ export const CV_DATA = {
       issuer: "Software University, Bulgaria",
       issued: "18/08/2020",
       period: "2020",
+      hours: 54,
       gpa: "6.00/6.00",
       topics: ["Basic Syntax, Conditional Statements and Loops", "Data Types and Variables", "Basic HTML", "Arrays", "Basic CSS", "Functions", "HTTP Basics", "Arrays Advanced", "Problem Solving", "Objects and Classes", "Bitwise Operations", "Associative Arrays", "Software Development Concepts", "Text Processing", "Database Basics", "Regular Expressions", "Git and GitHub", "QA Introduction"]
     },
@@ -172,6 +181,7 @@ export const CV_DATA = {
       issuer: "Software University, Bulgaria",
       issued: "23/12/2020",
       period: "2020",
+      hours: 27,
       gpa: "6.00/6.00",
       topics: ["Unit Testing and Modules", "REST Services and AJAX", "Asynchronous Programming", "Remote Databases", "Templating", "Routing", "Workshop: Single Page Application", "Design Patterns and Best Practices", "Project Architecture"]
     },
@@ -181,6 +191,7 @@ export const CV_DATA = {
       issuer: "Software University, Bulgaria",
       issued: "21/04/2021",
       period: "2021",
+      hours: 20,
       gpa: "6.00/6.00",
       topics: ["Intro to React and JSX", "Components: Basic Idea", "Components: Deep Dive", "Routing", "Forms", "React Hooks", "Advanced Techniques"]
     },
@@ -190,6 +201,7 @@ export const CV_DATA = {
       issuer: "Software University, Bulgaria",
       issued: "04/03/2022",
       period: "2022",
+      hours: 24,
       gpa: "5.13/6.00",
       topics: ["Intro to Node.js", "Node.js Streams and Utilities", "ExpressJS and Templating", "NoSQL and MongoDB", "Session and Authentication", "Validation and Error Handling"]
     },
@@ -199,6 +211,7 @@ export const CV_DATA = {
       issuer: "Software University, Bulgaria",
       issued: "18/04/2022",
       period: "2022",
+      hours: 28,
       gpa: "5.06/6.00",
       topics: ["Intro to Angular and TypeScript", "Components", "DI, Intro to RxJS, Services", "Modules and Routing", "Forms", "Pipes, Interceptors and Subjects", "State Management"]
     }

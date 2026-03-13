@@ -14,6 +14,7 @@ const CertModal = ({ cert, onClose }) => {
           <h2 className="cert-modal-name">{cert.name}</h2>
           <div className="cert-modal-meta">
             <span className="cert-modal-gpa">Grade: {cert.gpa}</span>
+            {cert.hours && <span className="cert-modal-hours">{cert.hours}h studied</span>}
             <span className="cert-modal-date">Issued: {cert.issued}</span>
           </div>
         </div>
