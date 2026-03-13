@@ -126,18 +126,19 @@ export const CV_DATA = {
     {
       id: 2,
       title: "Graphic Design",
-      description: "",
+      description: "I create visual identities and brand materials using Photoshop and Figma. My portfolio on Behance includes logo design, print layouts, and digital artwork.",
       link: "https://www.behance.net/StudioManata",
       image: "https://raw.githubusercontent.com/NikolayMantchev/cv/refs/heads/main/frontend/src/assets/design.png",
       category: "Graphic Design"
     },
     {
       id: 3,
-      title: "Store Owner",
-      description: "",
-      link: "",
-      image: "",
-      category: "Graphic Design"
+      title: "Bio Baby Store - Organic NEVI",
+      description: "I used to run a baby store in Frankfurt, Germany for 2 years. I was responsible for all aspects of the business, including inventory management, customer service, and marketing. I developed strong organizational and communication skills, as well as a deep understanding of retail operations.",
+      link: "-",
+      image: "https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/baby-store.JPG?raw=true",
+      images: ["https://raw.githubusercontent.com/NikolayMantchev/cv/refs/heads/main/frontend/src/assets/baby-store1.jpg","https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/baby-store2.JPG?raw=true","https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/baby-store3.JPG?raw=true"],
+      category: "Store Owner"
     }
   ],
 
@@ -159,7 +160,8 @@ export const CV_DATA = {
         { name: "ReactJS",                  hours: 20, grade: "6.00" },
         { name: "Angular",                  hours: 28, grade: "5.06" },
         { name: "HTML & CSS",               hours: 21, grade: "4.76" }
-      ]
+      ],
+      image: "https://www.dropbox.com/scl/fi/lk5p20nvy13zb7bcxw6lf/Diploma-for-JS-Web-Developer.pdf?rlkey=2pnk3r23s9yt5hkf2ra8ckcuu&st=skeij3bx&dl=0"
     }
   ],
 

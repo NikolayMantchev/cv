@@ -33,8 +33,36 @@ const CertModal = ({ cert, onClose }) => {
   );
 };
 
+const DiplomaModal = ({ education, onClose }) => {
+  if (!education) return null;
+  const directUrl = education.image.replace('dl=0', 'dl=1');
+  const viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(directUrl)}&embedded=true`;
+  const viewerUrlNewTab = `https://docs.google.com/viewer?url=${encodeURIComponent(directUrl)}`;
+
+  return (
+    <div className="cert-modal-overlay" onClick={onClose}>
+      <div className="cert-modal diploma-modal" onClick={e => e.stopPropagation()}>
+        <button className="cert-modal-close" onClick={onClose}>✕</button>
+        <div className="cert-modal-header">
+          <span className="cert-modal-issuer">{education.institution}</span>
+          <h2 className="cert-modal-name">{education.degree}</h2>
+          <div className="cert-modal-meta">
+            {education.gpa && <span className="cert-modal-gpa">GPA: {education.gpa}</span>}
+            {education.issued && <span className="cert-modal-date">Issued: {education.issued}</span>}
+          </div>
+        </div>
+        <iframe className="diploma-iframe" src={viewerUrl} title={education.degree} />
+        <a className="diploma-open-link" href={viewerUrlNewTab} target="_blank" rel="noopener noreferrer">
+          Open in new tab ↗
+        </a>
+      </div>
+    </div>
+  );
+};
+
 const Education = () => {
   const [activeCert, setActiveCert] = useState(null);
+  const [activeDiploma, setActiveDiploma] = useState(null);
   return (
     <>
       <section id="education" className="education-section">
@@ -52,7 +80,11 @@ const Education = () => {
                   className="education-item"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="education-card">
+                  <button
+                    className="education-card"
+                    onClick={() => education.image && setActiveDiploma(education)}
+                    style={education.image ? { cursor: 'pointer' } : {}}
+                  >
                     <div className="education-header">
                       <h3 className="institution">{education.institution}</h3>
                       <span className="education-gpa">{education.gpa ? `GPA: ${education.gpa}` : ''}</span>
@@ -60,7 +92,7 @@ const Education = () => {
                     <h4 className="degree">{education.degree}</h4>
                     <p className="period">{education.period}</p>
                     <p className="education-description">{education.description}</p>
-                  </div>
+                  </button>
                 </div>
               ))}
             </div>
@@ -90,6 +122,7 @@ const Education = () => {
       </section>
 
       <CertModal cert={activeCert} onClose={() => setActiveCert(null)} />
+      <DiplomaModal education={activeDiploma} onClose={() => setActiveDiploma(null)} />
     </>
   );
 };
