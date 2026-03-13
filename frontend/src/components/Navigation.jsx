@@ -38,7 +38,11 @@ const Navigation = () => {
   };
 
   return (
-    <>
+    <nav
+      className={`navigation ${scrolled ? 'scrolled' : ''}`}
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <button
         className="header__menu"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -47,26 +51,20 @@ const Navigation = () => {
         <img src={logoManata} alt="Logo" />
       </button>
 
-      <nav
-        className={`navigation ${scrolled ? 'scrolled' : ''}`}
-        role="navigation"
-        aria-label="Main navigation"
-      >
-        <ul className="nav-links" role="menubar" aria-orientation="horizontal">
-          {CV_DATA.navItems.map(item => (
-            <li key={item.id} role="none">
-              <button
-                className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
-                onClick={() => scrollToSection(item.id)}
-                aria-current={activeSection === item.id ? 'page' : undefined}
-              >
-                <span className="nav-label">{item.label}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </>
+      <ul className="nav-links" role="menubar" aria-orientation="horizontal">
+        {CV_DATA.navItems.map(item => (
+          <li key={item.id} role="none">
+            <button
+              className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
+              onClick={() => scrollToSection(item.id)}
+              aria-current={activeSection === item.id ? 'page' : undefined}
+            >
+              <span className="nav-label">{item.label}</span>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 
