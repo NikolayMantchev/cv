@@ -108,13 +108,13 @@
 
 .header__menu {
   position: fixed;
-  top: 0.75rem;
-  left: 1.5rem;
+  top: 0.1rem;
+  left: 0.5rem;
   z-index: 1001;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.35rem 0.5rem;
+  padding: 0.1rem 0.25rem;
   display: flex;
   align-items: center;
 }
@@ -155,4 +155,28 @@
     font-size: 0.85rem;
     padding: 0.6rem 0;
   }
+  .header__menu {
+  position: fixed;
+  top: 0.1rem;
+  left: 0.5rem;
+  z-index: 1001;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.1rem 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu img {
+  height: 32px;
+  width: auto;
+  display: block;
+  opacity: 0.85;
+  transition: opacity var(--animation-fast) var(--animation-ease-in-out);
+}
+
+.header__menu:hover img {
+  opacity: 1;
+}
 }
