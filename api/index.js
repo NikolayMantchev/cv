@@ -23,7 +23,6 @@ app.use(express.urlencoded({ extended: true }));
 const MONGODB_URI = process.env.MONGODB_URI;
 if (!MONGODB_URI) {
   console.error('❌ MONGODB_URI not set in environment variables');
-  process.exit(1);
 }
 
 mongoose.connect(MONGODB_URI, {
@@ -252,8 +251,6 @@ if (process.env.NODE_ENV !== 'production') {
 
 
 // Export for Vercel Serverless
-export const handler = (req, res) => {
+export default function handler(req, res) {
   return app(req, res);
-};
-
-export default app;
+}
