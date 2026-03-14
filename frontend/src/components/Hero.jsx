@@ -1,6 +1,7 @@
 import React from 'react';
 import CV_DATA from '../../../CV_DATA';
 import { Icon } from '../utils/icons';
+import HyperText from './HyperText';
 import './Hero.css';
 
 const Hero = ({ onNavigate }) => {
@@ -21,7 +22,9 @@ const Hero = ({ onNavigate }) => {
       <div className="hero-container">
         <div className="hero-content">
           <span className="hero-eyebrow">Portfolio — Frankfurt, Germany</span>
-          <h1 className="hero-name">{CV_DATA.personal.name}</h1>
+          <h1 className="hero-name">
+            <HyperText text={CV_DATA.personal.name} />
+          </h1>
           <p className="hero-title">{CV_DATA.personal.title}</p>
           <p className="hero-description">
             Full Stack JavaScript Web Developer passionate about building intelligent digital experiences. I specialize in creating innovative solutions that bridge the gap between technology and user needs. Let's explore how I can bring your ideas to life!
