@@ -86,7 +86,7 @@ export const CV_DATA = {
       name: "Favorites",
       description: "A full-stack bookmarking app with user registration, login, and complete CRUD operations. Built with JWT authentication and a clean interface for saving and sharing important links.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
-      link: "https://favorites-client.vercel.app/",
+      link: "https://favorites-gray.vercel.app/",
       github: true,
       featured: true,
       icon: "bookmark"
