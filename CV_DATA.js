@@ -147,12 +147,13 @@ export const CV_DATA = {
     {
       id: 1,
       institution: "Software University, Bulgaria",
-      degree: "JS Web Developer Diploma",
+      degree: "Front-End Developer with JavaScript",
       period: "2020 - 2022",
       issued: "15/09/2022",
-      description: "Professional qualification in JavaScript and Web Technologies. Completed 7 courses covering full-stack development with JavaScript, React, Angular, Node.js, and HTML & CSS.",
+      description: "Professional qualification in JavaScript and Web Technologies. Completed 8 courses covering full-stack development with JavaScript, React, Angular, Node.js, and HTML & CSS.",
       gpa: "5.3/6.0",
       courses: [
+        { name: "Programming Basics with JavaScript", hours: 18, grade: "5.64" },
         { name: "Programming Fundamentals", hours: 54, grade: "6.00" },
         { name: "JS Advanced",              hours: 27, grade: "4.02" },
         { name: "JS Applications",          hours: 27, grade: "6.00" },
@@ -161,7 +162,7 @@ export const CV_DATA = {
         { name: "Angular",                  hours: 28, grade: "5.06" },
         { name: "HTML & CSS",               hours: 21, grade: "4.76" }
       ],
-      image: "https://www.dropbox.com/scl/fi/lk5p20nvy13zb7bcxw6lf/Diploma-for-JS-Web-Developer.pdf?rlkey=2pnk3r23s9yt5hkf2ra8ckcuu&st=skeij3bx&dl=0"
+      image: "https://www.dropbox.com/scl/fi/z373gjriyxu78sch45aqv/Diploma-for-Front-End-Developer-with-JavaScript.pdf?rlkey=xoobe2urkhxmhvtanz52nx1is&dl=0"
     }
   ],
 
@@ -169,6 +170,16 @@ export const CV_DATA = {
   certifications: [
     {
       id: 1,
+      name: "Programming Basics with JavaScript March 2020",
+      issuer: "Software University, Bulgaria",
+      issued: "12/05/2020",
+      period: "2020",
+      hours: 18,
+      gpa: "5.64/6.00",
+      topics: ["First Steps in Coding", "Simple Operations And Calculations", "Conditional Statements", "Conditional Statements Advanced", "Loops - part 1", "Loops - part 2", "Nested Loops"]
+    },
+    {
+      id: 2,
       name: "JS Fundamentals — May 2020",
       issuer: "Software University, Bulgaria",
       issued: "18/08/2020",
@@ -178,7 +189,17 @@ export const CV_DATA = {
       topics: ["Basic Syntax, Conditional Statements and Loops", "Data Types and Variables", "Basic HTML", "Arrays", "Basic CSS", "Functions", "HTTP Basics", "Arrays Advanced", "Problem Solving", "Objects and Classes", "Bitwise Operations", "Associative Arrays", "Software Development Concepts", "Text Processing", "Database Basics", "Regular Expressions", "Git and GitHub", "QA Introduction"]
     },
     {
-      id: 2,
+      id: 3,
+      name: "JS Asvanced — September 2020",
+      issuer: "Software University, Bulgaria",
+      issued: "18/12/2020",
+      period: "2020",
+      hours: 27,
+      gpa: "4.02/6.00",
+      topics: ["Syntax, Functions and Statements", "Arrays and Nested Arrays", "Objects & Classes", "DOM", "DOM Manipulations", "Function Context", "Advanced Functions", "Object Composition", "Prototypes and Inheritance"]
+    },
+    {
+      id: 4,
       name: "JS Applications — October 2020",
       issuer: "Software University, Bulgaria",
       issued: "23/12/2020",
@@ -188,7 +209,7 @@ export const CV_DATA = {
       topics: ["Unit Testing and Modules", "REST Services and AJAX", "Asynchronous Programming", "Remote Databases", "Templating", "Routing", "Workshop: Single Page Application", "Design Patterns and Best Practices", "Project Architecture"]
     },
     {
-      id: 3,
+      id: 5,
       name: "ReactJS — March 2021",
       issuer: "Software University, Bulgaria",
       issued: "21/04/2021",
@@ -198,7 +219,7 @@ export const CV_DATA = {
       topics: ["Intro to React and JSX", "Components: Basic Idea", "Components: Deep Dive", "Routing", "Forms", "React Hooks", "Advanced Techniques"]
     },
     {
-      id: 4,
+      id: 6,
       name: "JS Back-End — January 2022",
       issuer: "Software University, Bulgaria",
       issued: "04/03/2022",
@@ -208,7 +229,7 @@ export const CV_DATA = {
       topics: ["Intro to Node.js", "Node.js Streams and Utilities", "ExpressJS and Templating", "NoSQL and MongoDB", "Session and Authentication", "Validation and Error Handling"]
     },
     {
-      id: 5,
+      id: 7,
       name: "Angular — March 2022",
       issuer: "Software University, Bulgaria",
       issued: "18/04/2022",
