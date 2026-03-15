@@ -220,6 +220,16 @@ export const CV_DATA = {
     },
     {
       id: 6,
+      name: "HTML & CSS - May 2021",
+      issuer: "Software University, Bulgaria",
+      issued: "21/07/2021",
+      period: "2021",
+      hours: 21,
+      gpa: "4.76/6.00",
+      topics: ["Introduction to HTML & CSS", "HTML Structure", "CSS & Typography", "CSS Box Model", "Position & Float", "Flexbox", "Media Queries and Responsive Design"]
+    },
+    {
+      id: 7,
       name: "JS Back-End — January 2022",
       issuer: "Software University, Bulgaria",
       issued: "04/03/2022",
@@ -229,7 +239,7 @@ export const CV_DATA = {
       topics: ["Intro to Node.js", "Node.js Streams and Utilities", "ExpressJS and Templating", "NoSQL and MongoDB", "Session and Authentication", "Validation and Error Handling"]
     },
     {
-      id: 7,
+      id: 8,
       name: "Angular — March 2022",
       issuer: "Software University, Bulgaria",
       issued: "18/04/2022",
