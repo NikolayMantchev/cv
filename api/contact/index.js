@@ -3,7 +3,7 @@ import { Resend } from 'resend'
 
 const MONGODB_URI = process.env.MONGODB_URI
 const resend = new Resend(process.env.RESEND_API_KEY)
-const TO_EMAIL = 'nik.mantchev@gmail.com'
+const TO_EMAIL = '04vision04@protonmail.com'
 
 let cached = global._mongooseConnection
 if (!cached) {
