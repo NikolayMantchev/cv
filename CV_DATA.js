@@ -28,12 +28,12 @@ export const CV_DATA = {
 
   // About Section
   about: {
-    headline: "Building Intelligent Digital Experiences",
-    description: "I'm a passionate Full Stack Developer with expertise in building modern web applications using React, Node.js, and MongoDB. I specialize in creating intelligent, user-centric applications that solve real-world problems.",
+    headline: "Where Code Meets Creativity",
+    description: "I'm a Full Stack Developer based in Frankfurt with a rare combination of technical depth and creative instinct. I build complete web applications — from database to deployment — and bring a designer's eye to every interface I create. Before writing code professionally, I ran my own business, which taught me to think in systems, take ownership, and build things that actually work for people.",
     bio: [
-      "2+ years of experience in full-stack development",
-      "Specialized in React and Node.js ecosystems",
-      "Passionate about clean code and best practices",
+      "Full-Stack: React, Node.js, MongoDB — from idea to live product",
+      "Creative background in photography and graphic design",
+      "Former entrepreneur — ran a retail business for 2 years in Frankfurt",
     ]
   },
 
@@ -84,7 +84,7 @@ export const CV_DATA = {
     {
       id: 1,
       name: "Favorites",
-      description: "Favorites is aplikation for bookmarking links. With features like Register, login, Favorites makes it easy to access and share important links whenever needed. It inkludes all crud operations, user authentication, and a user-friendly interface for managing your bookmarks.",
+      description: "A full-stack bookmarking app with user registration, login, and complete CRUD operations. Built with JWT authentication and a clean interface for saving and sharing important links.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
       link: "https://favorites-client.vercel.app/",
       github: true,
@@ -94,7 +94,7 @@ export const CV_DATA = {
     {
       id: 2,
       name: "My-Shared-Blog",
-      description: "Created with learning purpose. It includes all CRUD operations, Authentication, Autorization, // TO DO.. (Validation and Error handling not impemented yet!)",
+      description: "A shared blogging platform built with Angular and Firebase. Supports full CRUD, authentication, and role-based authorization.",
       technologies: ["Angular", "TypeScript", "Firebase"],
       link: "https://simple-blog-beta-two.vercel.app/home",
       github: true,
@@ -104,7 +104,7 @@ export const CV_DATA = {
     {
       id: 3,
       name: "Helium Stats",
-      description: "This App show statisticks for Hotspots on Helium Wallet Address. The pages/api directory is mapped to /api/*. Files in this directory are treated as API routes instead of React pages. They will be server-side only bundles and won't increase your client-side bundle size. API routes provide a solution to build your API with Next.js. You can write server-side code directly in these API routes, and it will be executed when the route is called.",
+      description: "A Next.js dashboard that displays live statistics for Helium network hotspots by wallet address. Uses server-side API routes to fetch and process blockchain data.",
       technologies: ["Next.js"],
       link: "https://helium-stats.vercel.app/",
       github: true,

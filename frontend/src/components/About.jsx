@@ -38,8 +38,8 @@ const About = () => {
               </div>
               <div className="skill-card-body">
                 <p className="skill-card-text">
-                  Building scalable, high-performance web applications with modern technologies.
-                  Passionate about clean code, intuitive interfaces, and creating exceptional user experiences.
+                  Full-stack development from database to deployment — with a designer's eye for detail.
+                  I care about interfaces that feel as good as they work.
                 </p>
               </div>
             </div>
@@ -51,8 +51,8 @@ const About = () => {
               </div>
               <div className="skill-card-body">
                 <p className="skill-card-text">
-                  I believe in the power of technology to solve real-world problems.
-                  Every line of code I write is designed with the user in mind.
+                  Technology is only useful when it solves real problems for real people.
+                  Running my own business taught me that — and I bring that mindset to every project.
                 </p>
               </div>
             </div>
@@ -64,8 +64,8 @@ const About = () => {
               </div>
               <div className="skill-card-body">
                 <p className="skill-card-text">
-                  To create innovative solutions that push the boundaries of what's possible
-                  in web development and AI integration.
+                  To build products that are technically solid, visually clean, and genuinely useful —
+                  combining full-stack expertise with a creative background few developers have.
                 </p>
               </div>
             </div>
