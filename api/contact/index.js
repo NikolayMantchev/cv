@@ -1,6 +1,9 @@
 import mongoose from 'mongoose'
+import { Resend } from 'resend'
 
 const MONGODB_URI = process.env.MONGODB_URI
+const resend = new Resend(process.env.RESEND_API_KEY)
+const TO_EMAIL = 'nik.mantchev@gmail.com'
 
 let cached = global._mongooseConnection
 if (!cached) {
@@ -27,7 +30,6 @@ const contactSchema = new mongoose.Schema({
 const ContactModel = mongoose.models.Contact || mongoose.model('Contact', contactSchema)
 
 export default async function handler(req, res) {
-  // Set CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
@@ -52,18 +54,33 @@ export default async function handler(req, res) {
       return res.status(400).json({ success: false, error: 'Invalid email format' })
     }
 
-    if (!MONGODB_URI) {
-      return res.status(500).json({ success: false, error: 'Database not configured' })
+    // Save to MongoDB
+    if (MONGODB_URI) {
+      await connectDB()
+      const contact = new ContactModel({ name, email, subject, message })
+      await contact.save()
     }
 
-    await connectDB()
-
-    const contact = new ContactModel({ name, email, subject, message })
-    await contact.save()
+    // Send email via Resend
+    await resend.emails.send({
+      from: 'CV Contact Form <onboarding@resend.dev>',
+      to: TO_EMAIL,
+      reply_to: email,
+      subject: `[CV] ${subject}`,
+      html: `
+        <h2>New message from your CV contact form</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+        <p><strong>Subject:</strong> ${subject}</p>
+        <hr />
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br />')}</p>
+      `
+    })
 
     return res.status(201).json({ success: true, message: 'Message sent successfully' })
   } catch (error) {
-    console.error('Error saving contact form:', error)
+    console.error('Error processing contact form:', error)
     return res.status(500).json({ success: false, error: 'Failed to send message' })
   }
 }
