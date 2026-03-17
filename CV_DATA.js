@@ -190,7 +190,7 @@ export const CV_DATA = {
     },
     {
       id: 3,
-      name: "JS Asvanced — September 2020",
+      name: "JS Advanced — September 2020",
       issuer: "Software University, Bulgaria",
       issued: "18/12/2020",
       period: "2020",
