@@ -22,7 +22,10 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="project-image">
-                <Icon name={project.icon} className="project-icon" />
+                {project.screenshot
+                  ? <img src={project.screenshot} alt={`${project.name} screenshot`} className="project-screenshot" />
+                  : <Icon name={project.icon} className="project-icon" />
+                }
               </div>
               <div className="project-content">
                 <div className="project-header">

@@ -1,5 +1,4 @@
 // Store all CV information here
-//import photography from "frontend/src/assets/photography.png";
 export const CV_DATA = {
   // Personal Information
   personal: {
@@ -21,7 +20,6 @@ export const CV_DATA = {
     { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills'},
     { id: 'projects', label: 'Projects'},
-    { id: 'creative', label: 'Creative' },
     { id: 'education', label: 'Education' },
     { id: 'contact', label: 'Contact' }
   ],
@@ -89,7 +87,8 @@ export const CV_DATA = {
       link: "https://favorites-gray.vercel.app/",
       github: true,
       featured: true,
-      icon: "bookmark"
+      icon: "bookmark",
+      screenshot: {favorites}
     },
     {
       id: 2,
@@ -99,7 +98,8 @@ export const CV_DATA = {
       link: "https://simple-blog-beta-two.vercel.app/home",
       github: true,
       featured: true,
-      icon: "article"
+      icon: "article",
+      screenshot: ""
     },
     {
       id: 3,
@@ -109,38 +109,11 @@ export const CV_DATA = {
       link: "https://helium-stats.vercel.app/",
       github: true,
       featured: true,
-      icon: "chart"
+      icon: "chart",
+      screenshot: ""
     }
   ],
 
-  // Creative Section
-  creative: [
-    {
-      id: 1,
-      title: "Photography",
-      description: "I have a passion for capturing moments and telling stories through my lens. I specialize in nature photography and have a growing portfolio of work that can be viewed online.",
-      link: "https://www.flickr.com/photos/64448797@N07/",
-      image: "https://raw.githubusercontent.com/NikolayMantchev/cv/refs/heads/main/frontend/src/assets/photography.png",
-      category: "Photography"
-    },
-    {
-      id: 2,
-      title: "Graphic Design",
-      description: "I create visual identities and brand materials using Photoshop and Figma. My portfolio on Behance includes logo design, print layouts, and digital artwork.",
-      link: "https://www.behance.net/StudioManata",
-      image: "https://raw.githubusercontent.com/NikolayMantchev/cv/refs/heads/main/frontend/src/assets/design.png",
-      category: "Graphic Design"
-    },
-    {
-      id: 3,
-      title: "Bio Baby Store - Organic NEVI",
-      description: "I used to run a baby store in Frankfurt, Germany for 2 years. I was responsible for all aspects of the business, including inventory management, customer service, and marketing. I developed strong organizational and communication skills, as well as a deep understanding of retail operations.",
-      link: "-",
-      image: "https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/baby-store.JPG?raw=true",
-      images: ["https://raw.githubusercontent.com/NikolayMantchev/cv/refs/heads/main/frontend/src/assets/baby-store1.jpg","https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/baby-store2.JPG?raw=true","https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/baby-store3.JPG?raw=true"],
-      category: "Store Owner"
-    }
-  ],
 
   // Education Section
   education: [

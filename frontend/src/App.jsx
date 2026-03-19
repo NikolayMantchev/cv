@@ -4,7 +4,6 @@ import About from './components/About'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
-import Creative from './components/Creative'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import ParticleCanvas from './components/ParticleCanvas'
@@ -42,7 +41,6 @@ function App() {
         <Experience />
         <Skills />
         <Projects />
-        <Creative />
         <Education />
         <Contact />
       </main>
