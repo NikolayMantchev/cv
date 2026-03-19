@@ -4,7 +4,8 @@ import { MdEmail, MdLocationOn, MdApi, MdBrush, MdCheck, MdBookmark, MdArticle, 
 import {
   SiReact, SiTypescript, SiAngular, SiNextdotjs,
   SiNodedotjs, SiExpress, SiMongodb,
-  SiVercel, SiGithubactions, SiFigma
+  SiVercel, SiGithubactions, SiFigma,
+  SiHtml5, SiCss3
 } from 'react-icons/si';
 import {
   HiOutlineDesktopComputer, HiOutlineServer,
@@ -22,6 +23,8 @@ export const ICON_MAP = {
   location: <MdLocationOn />,
 
   // Frontend skills
+  html:       <SiHtml5 />,
+  css:        <SiCss3 />,
   react:      <SiReact />,
   typescript: <SiTypescript />,
   angular:    <SiAngular />,

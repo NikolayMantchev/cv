@@ -54,9 +54,11 @@ export const CV_DATA = {
   // Skills Section
   skills: {
     frontend: [
+      { name: "HTML",       level: 95, icon: "html" },
+      { name: "CSS",        level: 95, icon: "css" },
       { name: "React",      level: 95, icon: "react" },
       { name: "TypeScript", level: 80, icon: "typescript" },
-      { name: "Angular",    level: 70, icon: "angular" },
+      { name: "Angular",    level: 80, icon: "angular" },
       { name: "Next.js",    level: 90, icon: "nextjs" }
     ],
     backend: [
@@ -88,7 +90,7 @@ export const CV_DATA = {
       github: true,
       featured: true,
       icon: "bookmark",
-      screenshot: {favorites}
+      screenshot:"https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/favorites-app.png?raw=true"
     },
     {
       id: 2,
