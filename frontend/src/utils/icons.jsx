@@ -1,11 +1,11 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaGlobe, FaDocker, FaGitAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaGlobe, FaDocker, FaGitAlt, FaHtml5, FaCss3Alt } from 'react-icons/fa';
 import { MdEmail, MdLocationOn, MdApi, MdBrush, MdCheck, MdBookmark, MdArticle, MdShowChart } from 'react-icons/md';
 import {
   SiReact, SiTypescript, SiAngular, SiNextdotjs,
   SiNodedotjs, SiExpress, SiMongodb,
   SiVercel, SiGithubactions, SiFigma,
-  SiHtml5, SiCss3
+  SiHtml5
 } from 'react-icons/si';
 import {
   HiOutlineDesktopComputer, HiOutlineServer,
@@ -24,7 +24,7 @@ export const ICON_MAP = {
 
   // Frontend skills
   html:       <SiHtml5 />,
-  css:        <SiCss3 />,
+  css:        <FaCss3Alt />,
   react:      <SiReact />,
   typescript: <SiTypescript />,
   angular:    <SiAngular />,
