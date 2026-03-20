@@ -6,6 +6,7 @@ import './Navigation.css';
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,9 +30,20 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
+      setMenuOpen(false);
       section.scrollIntoView({ behavior: 'smooth' });
       setActiveSection(sectionId);
     }
@@ -51,7 +63,18 @@ const Navigation = () => {
         <img src={logoManata} alt="Logo" />
       </button>
 
-      <ul className="nav-links" role="menubar" aria-orientation="horizontal">
+      <button
+        className={`hamburger ${menuOpen ? 'open' : ''}`}
+        onClick={() => setMenuOpen(prev => !prev)}
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={menuOpen}
+      >
+        <span className="hamburger__line" />
+        <span className="hamburger__line" />
+        <span className="hamburger__line" />
+      </button>
+
+      <ul className={`nav-links ${menuOpen ? 'active' : ''}`} role="menubar" aria-orientation="horizontal">
         {CV_DATA.navItems.map(item => (
           <li key={item.id} role="none">
             <button
