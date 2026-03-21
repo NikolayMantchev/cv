@@ -199,6 +199,41 @@ section {
   background: var(--color-primary);
 }
 
+/* ─── Loading Screen ─────────────────────────────────────── */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.loading-video {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.loading-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.loading-subtitle {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
 /* ─── Animations ──────────────────────────────────────────── */
 @keyframes fadeIn {
   from { opacity: 0; }
