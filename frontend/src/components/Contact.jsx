@@ -114,7 +114,7 @@ const Contact = () => {
           {/* Contact Form */}
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">{contact.form.name}</label>
+              <label htmlFor="name">Name</label>
               <input
                 type="text"
                 id="name"
@@ -127,7 +127,7 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">{contact.form.email}</label>
+              <label htmlFor="email">e-mail</label>
               <input
                 type="email"
                 id="email"
@@ -153,7 +153,7 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">{contact.form.message}</label>
+              <label htmlFor="message">Message</label>
               <textarea
                 id="message"
                 name="message"
