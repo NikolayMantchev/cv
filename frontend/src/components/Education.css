@@ -8,6 +8,7 @@
 .education-content {
   max-width: 1000px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 
@@ -125,7 +126,7 @@
 
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
   gap: 2rem;
 }
 
@@ -183,20 +184,21 @@
   }
 
   .education-timeline {
-    padding-left: 2rem;
+    padding-left: 0;
   }
 
   .education-item::before {
-    left: -2.8rem;
+    display: none;
   }
 
   .education-marker {
-    left: -1rem;
+    display: none;
   }
 
   .education-card {
     padding: 1.5rem;
-    margin-left: 0.75rem;
+    margin: 0 1rem;
+    width: auto;
   }
 
   .education-header {
@@ -207,6 +209,10 @@
   .education-gpa {
     width: 100%;
     text-align: center;
+  }
+
+  .certification-item {
+    margin: 0 1rem;
   }
 
   .certifications-grid {
