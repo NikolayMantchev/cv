@@ -38,6 +38,21 @@
   --animation-bounce:     cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+/* ─── Light Theme ────────────────────────────────────────── */
+[data-theme="light"] {
+  --color-background:        #F4F1EC;
+  --color-surface:           #FFFFFF;
+  --color-surface-highlight: #E8E5DF;
+  --color-primary:           #FF3D00;
+  --color-secondary:         #C8FF00;
+  --color-accent:            #FF3D00;
+  --color-text:              #1A1A1A;
+  --color-text-secondary:    #5A5550;
+  --color-border:            #D4D0CA;
+  --color-glow:              #FF3D00;
+  --color-gradient: linear-gradient(135deg, #FF3D00 0%, #C8FF00 100%);
+}
+
 /* ─── Reset ───────────────────────────────────────────────── */
 *, *::before, *::after {
   margin: 0;

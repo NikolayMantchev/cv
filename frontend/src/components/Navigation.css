@@ -20,6 +20,40 @@
   border-bottom: 1px solid var(--color-border);
 }
 
+[data-theme="light"] .navigation.scrolled {
+  background: rgba(244, 241, 236, 0.85);
+}
+
+/* ─── Theme Toggle ─────────────────────────────────────── */
+.theme-toggle {
+  position: absolute;
+  left: 2rem;
+  top: 3.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--animation-fast) var(--animation-ease-in-out),
+              border-color var(--animation-fast) var(--animation-ease-in-out);
+}
+
+.theme-toggle:hover {
+  color: var(--color-primary);
+}
+
+.theme-toggle-video {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
 .nav-links {
   display: flex;
   justify-content: center;
@@ -132,6 +166,10 @@
   opacity: 1;
 }
 
+[data-theme="light"] .header__menu img {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(80%) saturate(2000%) hue-rotate(10deg) brightness(95%) contrast(100%);
+}
+
 /* ─── Hamburger Button ──────────────────────────────────── */
 .hamburger {
   display: none;
@@ -180,6 +218,11 @@
 @media screen and (max-width: 768px) {
   .hamburger {
     display: flex;
+  }
+
+  .theme-toggle {
+    left: 1rem;
+    top: 3.5rem;
   }
 
   .nav-links {
@@ -283,6 +326,10 @@
 
   .header__menu:hover img {
     opacity: 1;
+  }
+
+  [data-theme="light"] .nav-links {
+    background: rgba(244, 241, 236, 0.97);
   }
 }
 

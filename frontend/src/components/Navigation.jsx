@@ -1,12 +1,43 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import CV_DATA from '../../../CV_DATA';
 import logoManata from '../assets/logo-manata.png';
+import toggleThemeVideo from '../assets/DARK MODE LIGHT MODE.webm';
 import './Navigation.css';
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const themeVideoRef = useRef(null);
+
+  const firstHalfRef = useRef(true);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+    const video = themeVideoRef.current;
+    if (video) {
+      const half = video.duration / 2;
+      const playingFirstHalf = firstHalfRef.current;
+      video.currentTime = playingFirstHalf ? 0 : half;
+      video.play();
+      const stopAt = playingFirstHalf ? half : video.duration;
+      const onTime = () => {
+        if (video.currentTime >= stopAt) {
+          video.pause();
+          video.removeEventListener('timeupdate', onTime);
+        }
+      };
+      video.addEventListener('timeupdate', onTime);
+      firstHalfRef.current = !playingFirstHalf;
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,6 +103,20 @@ const Navigation = () => {
         <span className="hamburger__line" />
         <span className="hamburger__line" />
         <span className="hamburger__line" />
+      </button>
+
+      <button
+        className="theme-toggle"
+        onClick={toggleTheme}
+        aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      >
+        <video
+          ref={themeVideoRef}
+          className="theme-toggle-video"
+          src={toggleThemeVideo}
+          muted
+          playsInline
+        />
       </button>
 
       <ul className={`nav-links ${menuOpen ? 'active' : ''}`} role="menubar" aria-orientation="horizontal">
