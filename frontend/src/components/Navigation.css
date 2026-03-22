@@ -27,8 +27,7 @@
 /* ─── Theme Toggle ─────────────────────────────────────── */
 .theme-toggle {
   position: absolute;
-  left: 2rem;
-  top: 3.5rem;
+  right: 2rem;
   background: transparent;
   border: none;
   border-radius: 2px;
@@ -48,8 +47,8 @@
 }
 
 .theme-toggle-video {
-  width: 96px;
-  height: 96px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   pointer-events: none;
 }
@@ -221,8 +220,7 @@
   }
 
   .theme-toggle {
-    left: 1rem;
-    top: 3.5rem;
+    right: 3.5rem;
   }
 
   .nav-links {

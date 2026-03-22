@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import CV_DATA from '../../../CV_DATA';
 import logoManata from '../assets/logo-manata.png';
-import toggleThemeVideo from '../assets/DARK MODE LIGHT MODE.webm';
+import toggleThemeVideo from '../assets/Toggle dark mode light mode themes.webm';
 import './Navigation.css';
 
 const Navigation = () => {
