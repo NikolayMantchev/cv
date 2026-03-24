@@ -18,8 +18,8 @@ export const CV_DATA = {
     { id: 'home', label: 'Home', logo: "https://www.dropbox.com/scl/fi/i6eyv09hpbs7n0m4pomz6/LOGO-Manata.png?rlkey=uxw30to5e91eayzl7q46dcqgk&st=bjavoul4&dl=0" },
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
-    { id: 'skills', label: 'Skills'},
-    { id: 'projects', label: 'Projects'},
+    { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
     { id: 'education', label: 'Education' },
     { id: 'contact', label: 'Contact' }
   ],
@@ -54,28 +54,28 @@ export const CV_DATA = {
   // Skills Section
   skills: {
     frontend: [
-      { name: "HTML",       level: 95, icon: "html" },
-      { name: "CSS",        level: 95, icon: "css" },
-      { name: "React",      level: 95, icon: "react" },
+      { name: "HTML", level: 95, icon: "html" },
+      { name: "CSS", level: 95, icon: "css" },
+      { name: "React", level: 95, icon: "react" },
       { name: "TypeScript", level: 80, icon: "typescript" },
-      { name: "Angular",    level: 80, icon: "angular" },
-      { name: "Next.js",    level: 90, icon: "nextjs" }
+      { name: "Angular", level: 80, icon: "angular" },
+      { name: "Next.js", level: 90, icon: "nextjs" }
     ],
     backend: [
-      { name: "Node.js",   level: 90, icon: "nodejs" },
-      { name: "Express",   level: 90, icon: "express" },
-      { name: "MongoDB",   level: 90, icon: "mongodb" },
+      { name: "Node.js", level: 90, icon: "nodejs" },
+      { name: "Express", level: 90, icon: "express" },
+      { name: "MongoDB", level: 90, icon: "mongodb" },
       { name: "REST APIs", level: 95, icon: "restapi" }
     ],
     devops: [
       { name: "Docker", level: 80, icon: "docker" },
       { name: "Vercel", level: 70, icon: "vercel" },
-      { name: "CI/CD",  level: 85, icon: "cicd" },
-      { name: "Git",    level: 85, icon: "git" }
+      { name: "CI/CD", level: 85, icon: "cicd" },
+      { name: "Git", level: 85, icon: "git" }
     ],
     grafik_design: [
       { name: "Photoshop", level: 90, icon: "photoshop" },
-      { name: "Figma",     level: 60, icon: "figma" }
+      { name: "Figma", level: 60, icon: "figma" }
     ]
   },
 
@@ -83,6 +83,17 @@ export const CV_DATA = {
   projects: [
     {
       id: 1,
+      name: "SnapLearn — AI-Powered Learning App for Students",
+      description: "A web application that transforms how students learn by converting photos of study materials into interactive quizzes with intelligent spaced repetition.",
+      technologies: ["React", "Anthropic Claude API (Vision + Text)", "Tailwind CSS", "Vite", "Node.js", "MongoDB", "Express", "JWT + Bcrypt"],
+      link: "https://snaplearn-two.vercel.app/",
+      github: true,
+      featured: true,
+      icon: "",
+      screenshot: "https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/favorites-app.png?raw=true"
+    },
+    {
+      id: 2,
       name: "Favorites",
       description: "A full-stack bookmarking app with user registration, login, and complete CRUD operations. Built with JWT authentication and a clean interface for saving and sharing important links.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
@@ -90,10 +101,10 @@ export const CV_DATA = {
       github: true,
       featured: true,
       icon: "bookmark",
-      screenshot:"https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/favorites-app.png?raw=true"
+      screenshot: "https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/favorites-app.png?raw=true"
     },
     {
-      id: 2,
+      id: 3,
       name: "My-Shared-Blog",
       description: "A shared blogging platform built with Angular and Firebase. Supports full CRUD, authentication, and role-based authorization.",
       technologies: ["Angular", "TypeScript", "Firebase"],
@@ -104,13 +115,13 @@ export const CV_DATA = {
       screenshot: ""
     },
     {
-      id: 3,
+      id: 4,
       name: "Helium Stats",
       description: "A Next.js dashboard that displays live statistics for Helium network hotspots by wallet address. Uses server-side API routes to fetch and process blockchain data.",
       technologies: ["Next.js"],
       link: "https://helium-stats.vercel.app/",
       github: true,
-      featured: true,
+      featured: false,
       icon: "chart",
       screenshot: ""
     }
@@ -130,12 +141,12 @@ export const CV_DATA = {
       courses: [
         { name: "Programming Basics with JavaScript", hours: 18, grade: "5.64" },
         { name: "Programming Fundamentals", hours: 54, grade: "6.00" },
-        { name: "JS Advanced",              hours: 27, grade: "4.02" },
-        { name: "JS Applications",          hours: 27, grade: "6.00" },
-        { name: "JS Back-End",              hours: 24, grade: "5.13" },
-        { name: "ReactJS",                  hours: 20, grade: "6.00" },
-        { name: "Angular",                  hours: 28, grade: "5.06" },
-        { name: "HTML & CSS",               hours: 21, grade: "4.76" }
+        { name: "JS Advanced", hours: 27, grade: "4.02" },
+        { name: "JS Applications", hours: 27, grade: "6.00" },
+        { name: "JS Back-End", hours: 24, grade: "5.13" },
+        { name: "ReactJS", hours: 20, grade: "6.00" },
+        { name: "Angular", hours: 28, grade: "5.06" },
+        { name: "HTML & CSS", hours: 21, grade: "4.76" }
       ],
       image: "https://www.dropbox.com/scl/fi/z373gjriyxu78sch45aqv/Diploma-for-Front-End-Developer-with-JavaScript.pdf?rlkey=xoobe2urkhxmhvtanz52nx1is&dl=0"
     }
@@ -245,10 +256,10 @@ export const CV_DATA = {
 
   // Social Links
   socialLinks: [
-    { platform: "email",    label: "Email",    url: "mailto:nik.mantchev@gmail.com",                 icon: "email" },
-    { platform: "github",   label: "GitHub",   url: "https://github.com/NikolayMantchev",            icon: "github" },
+    { platform: "email", label: "Email", url: "mailto:nik.mantchev@gmail.com", icon: "email" },
+    { platform: "github", label: "GitHub", url: "https://github.com/NikolayMantchev", icon: "github" },
     { platform: "linkedin", label: "LinkedIn", url: "https://www.linkedin.com/in/nikolay-mantchev/", icon: "linkedin" },
-    { platform: "website",  label: "Website",  url: "",                                              icon: "website" }
+    { platform: "website", label: "Website", url: "", icon: "website" }
   ],
 
   // Color Palette - Dark Techy Aesthetic
