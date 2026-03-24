@@ -90,7 +90,7 @@ export const CV_DATA = {
       github: true,
       featured: true,
       icon: "",
-      screenshot: "https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/favorites-app.png?raw=true"
+      screenshot: "https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/snap-learn.png?raw=true"
     },
     {
       id: 2,
