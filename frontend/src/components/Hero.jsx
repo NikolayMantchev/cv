@@ -1,4 +1,3 @@
-import React from 'react';
 import CV_DATA from '../../../CV_DATA';
 import { Icon } from '../utils/icons';
 import HyperText from './HyperText';

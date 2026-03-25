@@ -1,4 +1,3 @@
-import React from 'react';
 import CV_DATA from '../../../CV_DATA';
 import './Experience.css';
 

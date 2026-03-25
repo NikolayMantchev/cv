@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import CV_DATA from '../../../CV_DATA';
 import { Icon } from '../utils/icons';
 import './Contact.css';
