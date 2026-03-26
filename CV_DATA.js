@@ -141,12 +141,12 @@ export const CV_DATA = {
       courses: [
         { name: "Programming Basics with JavaScript", hours: 18, grade: "5.64" },
         { name: "Programming Fundamentals", hours: 54, grade: "6.00" },
-        { name: "JS Advanced", hours: 27, grade: "4.02" },
-        { name: "JS Applications", hours: 27, grade: "6.00" },
+        { name: "JS Advanced", hours: 86, grade: "4.02" },
+        { name: "JS Applications", hours: 90, grade: "6.00" },
         { name: "JS Back-End", hours: 24, grade: "5.13" },
-        { name: "ReactJS", hours: 20, grade: "6.00" },
-        { name: "Angular", hours: 28, grade: "5.06" },
-        { name: "HTML & CSS", hours: 21, grade: "4.76" }
+        { name: "ReactJS", hours: 49, grade: "6.00" },
+        { name: "Angular", hours: 49, grade: "5.06" },
+        { name: "HTML & CSS", hours: 45, grade: "4.76" }
       ],
       image: "https://www.dropbox.com/scl/fi/z373gjriyxu78sch45aqv/Diploma-for-Front-End-Developer-with-JavaScript.pdf?rlkey=xoobe2urkhxmhvtanz52nx1is&dl=0"
     }
