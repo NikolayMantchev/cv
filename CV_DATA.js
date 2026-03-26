@@ -139,8 +139,8 @@ export const CV_DATA = {
       description: "Professional qualification in JavaScript and Web Technologies. Completed 8 courses covering full-stack development with JavaScript, React, Angular, Node.js, and HTML & CSS.",
       gpa: "5.3/6.0",
       courses: [
-        { name: "Programming Basics with JavaScript", hours: 18, grade: "5.64" },
-        { name: "Programming Fundamentals", hours: 54, grade: "6.00" },
+        { name: "Programming Basics with JavaScript", hours: 58, grade: "5.64" },
+        { name: "Programming Fundamentals", hours: 99, grade: "6.00" },
         { name: "JS Advanced", hours: 86, grade: "4.02" },
         { name: "JS Applications", hours: 90, grade: "6.00" },
         { name: "JS Back-End", hours: 24, grade: "5.13" },
