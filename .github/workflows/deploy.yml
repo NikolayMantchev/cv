@@ -1,0 +1,75 @@
+name: Deploy Portfolio to Hetzner
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:  # erlaubt manuellen Trigger im GitHub UI
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Install frontend dependencies
+        run: npm ci
+        working-directory: ./frontend
+
+      - name: Build frontend
+        run: npm run build
+        working-directory: ./frontend
+
+      - name: Setup SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add server to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy frontend (rsync dist)
+        run: |
+          rsync -avz --delete \
+            ./frontend/dist/ \
+            ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/portfolio/frontend/dist/
+
+      - name: Deploy backend (rsync api)
+        run: |
+          rsync -avz --delete \
+            --exclude 'node_modules' \
+            --exclude '.env' \
+            ./api/ \
+            ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/portfolio/api/
+
+      - name: Sync package.json files
+        run: |
+          rsync -avz \
+            ./package.json ./package-lock.json \
+            ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/portfolio/
+
+      - name: Install backend dependencies + restart PM2
+        run: |
+          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} '
+            cd /var/www/portfolio &&
+            npm ci --omit=dev &&
+            pm2 reload portfolio-api || pm2 start api/server.js --name portfolio-api &&
+            pm2 save
+          '
+
+      - name: Verify deployment
+        run: |
+          sleep 3
+          curl --fail --silent --max-time 10 https://portfolio.studio-mana.de/api/health
