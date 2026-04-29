@@ -71,5 +71,24 @@ jobs:
 
       - name: Verify deployment
         run: |
-          sleep 3
-          curl --fail --silent --max-time 10 https://portfolio.studio-mana.de/api/health
+          sleep 5
+          for i in 1 2 3; do
+            response=$(curl --silent --max-time 10 -w "\n%{http_code}" \
+              https://portfolio.studio-mana.de/api/health || echo -e "\n000")
+            
+            http_code=$(echo "$response" | tail -n 1)
+            body=$(echo "$response" | sed '$d')
+            
+            if [ "$http_code" = "200" ]; then
+              echo "✅ Deployment successful (attempt $i)"
+              echo "Response: $body"
+              exit 0
+            fi
+            
+            echo "⏳ Attempt $i failed (HTTP $http_code), retrying..."
+            sleep 5
+          done
+          
+          echo "❌ Health check failed"
+          echo "Last response: $body"
+          exit 1
