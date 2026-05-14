@@ -82,6 +82,17 @@ export const CV_DATA = {
   // Projects Section
   projects: [
     {
+      id: 0,
+      name: "EasyRechnung — ZUGFeRD/XRechnung Generator",
+      description: "EasyRechnung ist eine B2B-/B2G-Rechnungs-App für Freelancer und Selbstständige. Generiere ZUGFeRD/XRechnung E-Rechnungen für deine Geschäftskunden direkt auf deinem Smartphone — schnell, sicher und DSGVO-konform.",
+      technologies: ["React Native", "Expo", "Node.js", "Express", "TypeScript", "ZUGFeRD", "XRechnung", "PDF/A-3"],
+      link: "https://www.easyrechnung.studio-mana.de",
+      github: false,
+      featured: true,
+      icon: "https://www.easyrechnung.studio-mana.de/favicon.ico",
+      screenshot: ""
+    },
+    {
       id: 1,
       name: "SnapLearn — AI-Powered Learning App for Students",
       description: "A web application that transforms how students learn by converting photos of study materials into interactive quizzes with intelligent spaced repetition.",
