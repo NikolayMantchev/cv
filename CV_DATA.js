@@ -86,7 +86,7 @@ export const CV_DATA = {
       name: "EasyRechnung — ZUGFeRD/XRechnung Generator",
       description: "EasyRechnung ist eine B2B-/B2G-Rechnungs-App für Freelancer und Selbstständige. Generiere ZUGFeRD/XRechnung E-Rechnungen für deine Geschäftskunden direkt auf deinem Smartphone — schnell, sicher und DSGVO-konform.",
       technologies: ["React Native", "Expo", "Node.js", "Express", "TypeScript", "ZUGFeRD", "XRechnung", "PDF/A-3"],
-      link: "https://www.easyrechnung.studio-mana.de",
+      link: "https://easyrechnung.studio-mana.de",
       github: false,
       featured: true,
       icon: "https://www.easyrechnung.studio-mana.de/favicon.ico",
