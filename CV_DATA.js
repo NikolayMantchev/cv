@@ -90,7 +90,7 @@ export const CV_DATA = {
       github: false,
       featured: true,
       icon: "https://www.easyrechnung.studio-mana.de/favicon.ico",
-      screenshot: ""
+      screenshot: "https://github.com/NikolayMantchev/cv/blob/main/frontend/src/assets/en-base1024x500.jpg?raw=true"
     },
     {
       id: 1,
